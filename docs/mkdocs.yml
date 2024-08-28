@@ -1,10 +1,10 @@
 ### Site metadata ###
 
-site_name: MkDocs Quickstart
-site_description: Starter template for a MkDocs docs site on GH Pages - including CI
-site_url: https://michaelcurrin.github.io/mkdocs-quickstart/
+site_name: NRV docs
+site_description: NRV HW/SW resources & documentations
+site_url: https://nrvcorp.github.io/docs/
 
-repo_url: https://github.com/MichaelCurrin/mkdocs-quickstart
+repo_url: https://nrvcorp.github.io/docs/
 edit_uri: edit/master/docs/docs
 
 ### Build settings ###
