@@ -1,5 +1,4 @@
-# NRV PROJECT
->
+# MkDocs Quickstart
 > Starter template for a MkDocs docs site on GH Pages - including CI
 
 [![CI status](https://github.com/MichaelCurrin/mkdocs-quickstart/workflows/Deploy%20Docs/badge.svg)](https://github.com/MichaelCurrin/mkdocs-quickstart/actions)
@@ -16,11 +15,13 @@ MkDocs is a Python package when turns your docs directory and YAML config into a
 
 <!-- TODO When creating a new project copied from this template, you can delete this README.md and start over -->
 
+
 ## Purpose
 
 This project provides low-code content-focused way to set up and host a markdown-based documentation site, with a professional look and themes. Built with MkDocs - a Python package which is a static site generator specializing in documentation.
 
 A GitHub Actions workflow is provided with this template so you can easily deploy to GitHub Pages too.
+
 
 ## Preview
 
@@ -30,7 +31,7 @@ A GitHub Actions workflow is provided with this template so you can easily deplo
 
 </div>
 
-This template project is configured to use the _Read the Docs_ theme, as shown above.
+This template project is configured to use the _Read the Docs_ theme, as shown above. 
 
 Thus looks like the the [Read The Docs][] site, but without having to have to overhead of using Sphinx.
 
@@ -39,6 +40,7 @@ Thus looks like the the [Read The Docs][] site, but without having to have to ov
 This Read the Docs theme for MkDocs comes with MkDocs already, so you don't need to add to your dependencies. But you can switch to the MkDocs default or install and configure another theme.
 
 You can switch to the default theme or install some others, based on the instructions in this template project.
+
 
 ## How to use this project
 
@@ -49,6 +51,7 @@ You can switch to the default theme or install some others, based on the instruc
 [![Use this template](https://img.shields.io/badge/Generate-Use_this_template-2ea44f?style=for-the-badge)](https://github.com/MichaelCurrin/mkdocs-quickstart/generate)
 
 </div>
+
 
 ## Features
 
@@ -77,6 +80,7 @@ Change the content and theme to suit your needs, based on the tutorial site or t
 
 To isolate the MkDocs flow from the rest of your code, you can put the configs and the `docs` folder of content inside the `docs` directory. That means you end up having `docs/docs`, which is okay. Just make sure you select the `/docs` directory when setting up GH Pages.
 
+
 ## About MkDocs
 
 ### Resources
@@ -93,6 +97,7 @@ This project provides a way to write your docs in markdown and build a professio
 
 Compared with Jekyll and Docsify, I found the MkDocs code is much lighter to set up and changing themes is much easier than Jekyll. Also you get the benefits SEO which Docsify doesn't have. And it includes a search bar using JS.
 
+
 ## Contributing
 
 Submit an issue.
@@ -104,6 +109,7 @@ Or submit a code change:
 3. Make any changes you want. Be sure to keep a copy of the original license in the repo.
     - e.g. `cp LICENSE LICENSE-source`
 4. Create a Pull Request.
+
 
 ## License
 

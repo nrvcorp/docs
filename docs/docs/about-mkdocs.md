@@ -1,4 +1,5 @@
-# NRV
+# About MkDocs
+
 
 ## What is MkDocs?
 
@@ -10,6 +11,7 @@ MkDocs is a Python tool that generates a static site based on content written in
 
 If you are new to markdown, see the [Getting Started](https://www.markdownguide.org/getting-started/) page on the Markdown Guide website.
 
+
 ## Resources
 
 - [mkdocs.org](https://www.mkdocs.org) homepage
@@ -17,20 +19,22 @@ If you are new to markdown, see the [Getting Started](https://www.markdownguide.
 - [MkDocs Wiki](https://github.com/mkdocs/mkdocs/wiki) - covering themes, plugins, recipes and more.
 - [Release notes](https://www.mkdocs.org/about/release-notes/) for MkDocs.
 
+
 ## Reasons to use MkDocs
 
 - Create an elegant, modern docs site for your project.
 - Create a static site and serve from GitHub Pages easily.
 - Low-code solution
-  - No need to write HTML or learn templating syntax needed
-  - Use your existing markdown files as content.
-  - Configure with a simple YAML file.
+    - No need to write HTML or learn templating syntax needed
+    - Use your existing markdown files as content.
+    - Configure with a simple YAML file.
 - Customizable.
-  - Add custom HTML if you want.
-  - Plugins available.
-  - Flexible theme choices.
+    - Add custom HTML if you want.
+    - Plugins available.
+    - Flexible theme choices.
 - Includes search by default.
 - Broken links to files (including from your navbar) will be detected at build time and shown as warnings.
+
 
 ## Do I need to know Python?
 
