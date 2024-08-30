@@ -1,0 +1,9 @@
+site_name: NRV docs
+
+theme: readthedocs
+
+nav:
+  - Home: index.md
+  - About NRV: about-NRV.md
+  - Projects:
+      - how to start: projects/project.md
