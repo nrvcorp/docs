@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="Starter template for a MkDocs docs site on GH Pages - including CI" /><link rel="canonical" href="https://michaelcurrin.github.io/mkdocs-quickstart/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
       <link rel="shortcut icon" href="img/favicon.ico" />
-    <title>MkDocs Quickstart</title>
+    <title>NRV docs</title>
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -14,7 +14,7 @@
         // Current page data
         var mkdocs_page_name = "Home";
         var mkdocs_page_input_path = "index.md";
-        var mkdocs_page_url = "/mkdocs-quickstart/";
+        var mkdocs_page_url = null;
       </script>
     
     <!--[if lt IE 9]>
@@ -30,7 +30,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="." class="icon icon-home"> MkDocs Quickstart
+          <a href="." class="icon icon-home"> NRV docs
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -42,28 +42,20 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Home</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#features">Features</a>
+    <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#project-layout">Project layout</a>
     </li>
     </ul>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="about-mkdocs/">About MkDocs</a>
+                <li class="toctree-l1"><a class="reference internal" href="about-NRV/">About NRV</a>
                 </li>
               </ul>
-              <p class="caption"><span class="caption-text">Tutorial</span></p>
+              <p class="caption"><span class="caption-text">Projects</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="tutorial/tldr/">TL;DR</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="tutorial/installation/">Installation</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="tutorial/setup-project/">Set up project</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="tutorial/advanced/">Advanced</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="tutorial/usage/">Usage</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="tutorial/deploy/">Deploy</a>
+                  <li class="toctree-l1"><a class="reference internal" href="projects/project/">how to start</a>
                   </li>
               </ul>
       </div>
@@ -73,7 +65,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href=".">MkDocs Quickstart</a>
+          <a href=".">NRV docs</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -82,7 +74,6 @@
     <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
       <li class="breadcrumb-item active">Home</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/MichaelCurrin/mkdocs-quickstart/edit/master/docs/docs/index.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -90,40 +81,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="mkdocs-quickstart">MkDocs Quickstart</h1>
-<blockquote>
-<p>Started template for a MkDocs docs site on GH Pages - including CI </p>
-</blockquote>
-<p><a href="https://github.com/MichaelCurrin/mkdocs-quickstart"><img alt="Repo stars" src="https://img.shields.io/github/stars/MichaelCurrin/mkdocs-quickstart?style=social" /></a></p>
-<p>Use the MkDocs (<em>make docs</em>) tool to create build a docs site around markdown docs.</p>
-<p>Follow the tutorial to add an existing project or create a project from scratch. The result will look like this project.</p>
-<h2 id="features">Features</h2>
-<blockquote>
-<p>How to use this project</p>
-</blockquote>
+                <h1 id="welcome-to-nrv">Welcome to NRV</h1>
+<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
+<h2 id="commands">Commands</h2>
 <ul>
-<li><strong>Follow the tutorial instructions</strong><ul>
-<li>Install and configure a new or existing project.</li>
-<li>Run it locally.</li>
-<li>Deploy it.</li>
+<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
+<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
+<li><code>mkdocs build</code> - Build the documentation site.</li>
+<li><code>mkdocs -h</code> - Print help message and exit.</li>
 </ul>
-</li>
-<li><strong>Add a copy of this project to your repos</strong><ul>
-<li><a href="https://github.com/MichaelCurrin/mkdocs-quickstart/generate"><img alt="Use this template" src="https://img.shields.io/badge/Use_this_template-2ea44f?logo=github" /></a></li>
-</ul>
-</li>
-<li><strong>View the live demo</strong><ul>
-<li>This site is hosted on GitHub Pages. See if you like it. Other themes are available - see the tutorial.</li>
-</ul>
-</li>
-</ul>
-<p>The aim here is not be complete or explain all concepts. It is to provide a reference for common steps and choices needed when setting up a docs site, but still at a beginner-friendly level.</p>
-<p>This guide is based on the <a href="https://www.mkdocs.org/">mkdocs.org</a> tutorial.</p>
+<h2 id="project-layout">Project layout</h2>
+<pre><code>mkdocs.yml    # The configuration file.
+docs/
+    index.md  # The documentation homepage.
+    ...       # Other markdown pages, images and other files.
+</code></pre>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="about-mkdocs/" class="btn btn-neutral float-right" title="About MkDocs">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="about-NRV/" class="btn btn-neutral float-right" title="About NRV">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -145,13 +122,9 @@
   <div class="rst-versions" role="note" aria-label="Versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
     
-        <span>
-          <a href="https://github.com/MichaelCurrin/mkdocs-quickstart" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
-        </span>
     
     
-    
-      <span><a href="about-mkdocs/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="about-NRV/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
@@ -171,5 +144,5 @@
 
 <!--
 MkDocs version : 1.6.0
-Build Date UTC : 2024-08-30 07:07:50.487098+00:00
+Build Date UTC : 2024-08-30 07:29:10.635587+00:00
 -->
