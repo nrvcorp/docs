@@ -4,6 +4,9 @@ theme: readthedocs
 
 nav:
   - Home: index.md
-  - About NRV: about-NRV.md
+  # - About NRV: about-NRV.md
   - Projects:
-      - how to start: projects/project.md
+    - MIPI2PCIE_AXIS : projects/MIPI2PCIE_AXIS.md
+  - MANUAL:
+    - DVS-FMC Board Pinmap : datasheet/DVS_FMC.md
+    - DVS-MIPI Register Set File: register/DVS_MIPI.md

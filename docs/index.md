@@ -1,17 +1,19 @@
 # Welcome to NRV
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Our company holds the distinction of being the first in the world to mass-produce event-based image sensors, combined with proven expertise in machine learning hardware and software. With a primary focus on low-latency, ultra-high-speed image recognition systems, it aims to become a global leader in AI-powered image processing sensors and application systems.
 
-## Commands
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
 
-## Project layout
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+-------------------------------------------------
+ADDRESS: Building B, 27 Dongtancheomdansaneop 1-ro, Hwaseong-si, Gyeonggi-do, South Korea
+E-MAIL: eric.ryu@nrv.kr
