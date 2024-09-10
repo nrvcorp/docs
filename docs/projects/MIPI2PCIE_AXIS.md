@@ -1,4 +1,5 @@
-#Zynq UltraScale+ MPSoC - ZCU106 MIPI2PCIE_AXIS Example Design
+# Zynq UltraScale+ MPSoC - ZCU106 MIPI2PCIE_AXIS Example Design
+
 This technical article provides you an overview of the ZCU106 MIPI2PCIE_AXIS Example design.
 
 **Table of Contents**
@@ -10,13 +11,14 @@ This technical article provides you an overview of the ZCU106 MIPI2PCIE_AXIS Exa
 
 ----
 
+## Document History
 
-###Document History
 | Date            | Version | Author      | Description of Revisions                       |
 |-----------------|---------|-------------|------------------------------------------------|
 | August 31, 2024 | 1.0     | Soosung Kim | First MIPI2PCIE_AXIS Example Design of ZCU106  |
 
-###Introduction
+## Introduction
+
 ZCU106 Evaluation Platform <br>
 <img src="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/MIPI2PCIE_AXIS/imgs/zcu106.png?raw=true" alt="board_setup" width="" />
 
@@ -29,17 +31,19 @@ The ZCU106 MIPI2PCIE_AXIS Example Design uses the following IPs along with the Z
 5. AXI IIC (Xilinx IP)
 6. AXI GPIO (Xilinx IP)
 
-###Download and Installation
-1. Install __Vivado 2021.2__, __Vitis 2021.2__ from [Vivado Design suite](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html).
-2. Download __host code__ from our GitHub page ([https://github.com/nrvcorp/mipi_controller_new](https://github.com/nrvcorp/mipi_controller_new)).
+## Download and Installation
+
+1. Install **Vivado 2021.2**, **Vitis 2021.2** from [Vivado Design suite](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html).
+2. Download **host code** from our GitHub page ([https://github.com/nrvcorp/mipi_controller_new](https://github.com/nrvcorp/mipi_controller_new)).
 
 Here are some reference materials you might find useful: <br>
+
 - _View our DVS-MIPI Register Setfile from [here](https://nrvcorp.github.io/docs/register/DVS_MIPI/)._ <br>
 - _View our DVS-FMC Board Pinmap from [here](https://nrvcorp.github.io/docs/datasheet/DVS_FMC/)._ <br>
 - _View AER Packet Format from [here](https://github.com/nrvcorp/docs/blob/gh-pages/assets/datasheet/dvs_datasheet/aer_packet_format.pdf?raw=true)._
 
+## Steps to Operate DVS Camera
 
-###Steps to Operate DVS Camera
 1) The distributed SD Card will contain a boot image (BOOT.BIN)
 
 <img src="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/MIPI2PCIE_AXIS/imgs/boot_image.png?raw=true" alt="boot_image" width="" />
@@ -52,7 +56,6 @@ Here are some reference materials you might find useful: <br>
 5) Turn on the host PC and ZCU106 board. <br>
 6) Once the host PC is fully powered on, press the SW19 GPIO pin on the ZCU106 board. <br>
 7) Run host code on the PC.
-
 
 Below figure shows the complete board setup. <br>
 <img src="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/MIPI2PCIE_AXIS/imgs/board_setup.png?raw=true" alt="board_setup" width="320" />

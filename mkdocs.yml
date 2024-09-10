@@ -5,8 +5,11 @@ theme: readthedocs
 nav:
   - Home: index.md
   # - About NRV: about-NRV.md
+  - IP REPO:
+      - mipi_rx_subsystem: ip_repo/mipi_rx_subsystem.md
   - Projects:
-    - MIPI2PCIE_AXIS : projects/MIPI2PCIE_AXIS.md
+      - MIPI2PCIE_AXIS: projects/MIPI2PCIE_AXIS.md
+      - CIS_DVS: projects/CIS_DVS.md
   - MANUAL:
-    - DVS-FMC Board Pinmap : datasheet/DVS_FMC.md
-    - DVS-MIPI Register Set File: register/DVS_MIPI.md
+      - DVS-FMC Board Pinmap: datasheet/DVS_FMC.md
+      - DVS-MIPI Register Set File: register/DVS_MIPI.md
