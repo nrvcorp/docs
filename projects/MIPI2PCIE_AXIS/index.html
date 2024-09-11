@@ -56,15 +56,17 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#2-introduction">2. Introduction</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3-download-and-installation">3. Download and Installation</a>
+    <li class="toctree-l2"><a class="reference internal" href="#3-os-requirements">3. OS Requirements</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-download-and-installation">4. Download and Installation</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#how-to-install-pcie-drivers">How to Install PCIE drivers</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#how-to-install">How to Install</a>
+    <li class="toctree-l3"><a class="reference internal" href="#setting-up-the-working-environment">Setting up the Working Environment</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#4-steps-to-operate-dvs-camera">4. Steps to Operate DVS Camera</a>
+    <li class="toctree-l2"><a class="reference internal" href="#5-steps-to-operate-dvs-camera">5. Steps to Operate DVS Camera</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#1-program-the-board">1. Program the Board</a>
     </li>
@@ -114,8 +116,9 @@
 <ol>
 <li><a href="#1-document-history">Document History</a></li>
 <li><a href="#2-introduction">Introduction</a></li>
-<li><a href="#3-download-and-installation">Download and Installation</a></li>
-<li><a href="#4-steps-to-operate-dvs-camera">Steps to Operate DVS Camera</a></li>
+<li><a href="#3-os-requirements">OS Requirements</a></li>
+<li><a href="#4-download-and-installation">Download and Installation</a></li>
+<li><a href="#5-steps-to-operate-dvs-camera">Steps to Operate DVS Camera</a></li>
 </ol>
 <hr />
 <h2 id="1-document-history">1. Document History</h2>
@@ -149,7 +152,14 @@
 <li>AXI IIC ( Xilinx IP )</li>
 <li>AXI GPIO ( Xilinx IP )</li>
 </ol>
-<h2 id="3-download-and-installation">3. Download and Installation</h2>
+<h2 id="3-os-requirements">3. OS Requirements</h2>
+<p>The OS requirements are as follows : </p>
+<ul>
+<li>The project runs on a Ubuntu host PC of 20.04 or newer.</li>
+<li>The ZCU106 board should be connected to the host PC via PCI-Express Cable.  </li>
+<li>However, the Vivado bitstream generation ( and programming the board with Vitis through JTAG &amp; UART in some cases ) can be run on a Windows PC.</li>
+</ul>
+<h2 id="4-download-and-installation">4. Download and Installation</h2>
 <p>The project consists of the following:</p>
 <ul>
 <li>Vivado Project ( <a href="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/CIS_DVS/cis_dvs_project.zip?raw=true">Download Link</a> )</li>
@@ -159,8 +169,8 @@
 <br></li>
 </ul>
 <h3 id="how-to-install-pcie-drivers">How to Install PCIE drivers</h3>
-<p>To connect the host pc with the ZCU106, downloading and installing XDMA drivers from Xilinx is required. ( <a href="https://github.com/Xilinx/dma_ip_drivers/tree/master/XDMA/linux-kernel">Github Page</a> )</p>
-<h3 id="how-to-install">How to Install</h3>
+<p>To connect the host pc with the ZCU106, downloading and installing XDMA drivers from Xilinx are required. ( <a href="https://github.com/Xilinx/dma_ip_drivers/tree/master/XDMA/linux-kernel">Github Page</a> )</p>
+<h3 id="setting-up-the-working-environment">Setting up the Working Environment</h3>
 <ol>
 <li>Install <strong>Vivado 2021.2</strong>, <strong>Vitis 2021.2</strong> from <a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html">Vivado Design suite</a>.</li>
 <li>Download dvs_project.zip file and unzip <br />
@@ -179,7 +189,7 @@ Make sure the HLS does not experience y2k22 bugs when exporting IPs such as Gamm
 (<a href="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/MIPI2PCIE_AXIS/firmware/MIPI2PCIE_AXIS_FIRMWARE.zip?raw=true">Download firmware code</a>)</li>
 <li>Right click <code>&lt;project_name_system&gt;</code> on the Flow Navigator and click <code>Build Project</code></li>
 </ol>
-<h2 id="4-steps-to-operate-dvs-camera">4. Steps to Operate DVS Camera</h2>
+<h2 id="5-steps-to-operate-dvs-camera">5. Steps to Operate DVS Camera</h2>
 <h3 id="1-program-the-board">1. Program the Board</h3>
 <p>From here, there are two options for programming the ZCU106. <br />
 <strong>Option 1: Using SD Card</strong> <br>
