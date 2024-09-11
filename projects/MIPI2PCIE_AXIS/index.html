@@ -224,8 +224,13 @@ Make sure the HLS does not experience y2k22 bugs when exporting IPs such as Gamm
 9. Run host code on the PC. </p>
 <h3 id="2-run-host-code">2. Run Host Code</h3>
 <ol>
-<li>Download MIPI2PCIE_AXIS_HOST.zip and unzip <br>
-(<a href="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/MIPI2PCIE_AXIS/host/MIPI2PCIE_AXIS_HOST.zip?raw=true">Download the host code</a>)</li>
+<li>On the host PC, download MIPI2PCIE_AXIS_HOST.zip and unzip <br>
+(<a href="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/MIPI2PCIE_AXIS/host/MIPI2PCIE_AXIS_HOST.zip?raw=true">Download the host code</a>) <br></li>
+<li>Open a terminal and <code>cd</code> to the host code directory <br></li>
+<li>Open <code>&lt;host_code_dir&gt;/src/config.hpp</code> <br></li>
+<li>Run <code>ls /dev</code> on a separate terminal to check xdma ports. Modify the contents of <code>config.hpp</code> to match the results of <code>ls /dev</code>. <br></li>
+<li>Run <code>make clean</code> → <code>make</code> over the host code.</li>
+<li>Run <code>./main</code> on the terminal.</li>
 </ol>
 <p>Below figure shows the complete board setup. <br> <br>
 <img src="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/MIPI2PCIE_AXIS/imgs/board_setup.png?raw=true" alt="board_setup" width="320" /> <br></p>
