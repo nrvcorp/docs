@@ -58,13 +58,23 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#2-introduction">2. Introduction</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3-download-and-installation">3. Download and Installation</a>
+    <li class="toctree-l2"><a class="reference internal" href="#3-os-requirements">3. OS Requirements</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-download-and-installation">4. Download and Installation</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#how-to-install">How to Install</a>
+    <li class="toctree-l3"><a class="reference internal" href="#how-to-install-pcie-drivers">How to Install PCIE drivers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#setting-up-the-working-environment">Setting up the Working Environment</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#4-steps-to-operate-both-cameras">4. Steps to Operate Both Cameras</a>
+    <li class="toctree-l2"><a class="reference internal" href="#5-steps-to-operate-both-cameras">5. Steps to Operate Both Cameras</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-program-the-board">1. Program the Board</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-run-host-code">2. Run Host Code</a>
+    </li>
+        </ul>
     </li>
     </ul>
                   </li>
@@ -106,8 +116,11 @@
 <ol>
 <li><a href="#1-document-history">Document History</a></li>
 <li><a href="#2-introduction">Introduction</a></li>
-<li><a href="#3-download-and-installation">Download and Installation</a></li>
+<li><a href="#3-os-requirements">OS Requirements</a></li>
+<li><a href="#4-download-and-installation">Download and Installation</a></li>
+<li><a href="#5-steps-to-operate-both-cameras">Steps to Operate Both Cameras</a></li>
 </ol>
+<hr />
 <h2 id="1-document-history">1. Document History</h2>
 <table>
 <thead>
@@ -148,15 +161,25 @@
 <p>The <strong>ZCU106 CIS_DVS streaming Example Design</strong> uses <strong>LI-IMX274MIPI-FMC</strong> for the CIS camera.
 <a href="https://leopardimaging.com/product/platform-partners/amd/li-imx274mipi-fmc/">Cis Camera Vendor Link</a></p>
 <hr />
-<h2 id="3-download-and-installation">3. Download and Installation</h2>
+<h2 id="3-os-requirements">3. OS Requirements</h2>
+<p>The OS requirements are as follows : </p>
+<ul>
+<li>The project runs on a Ubuntu host PC of 20.04 or newer.</li>
+<li>The ZCU106 board should be connected to the host PC via PCI-Express Cable.  </li>
+<li>However, the Vivado bitstream generation ( and programming the board with Vitis through JTAG &amp; UART in some cases ) can be run on a Windows PC.</li>
+</ul>
+<hr />
+<h2 id="4-download-and-installation">4. Download and Installation</h2>
 <p>The project consists of the following:</p>
 <ul>
-<li>Vivado Project (<a href="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/CIS_DVS/cis_dvs_project.zip?raw=true">Download Link</a>)</li>
-<li>Firmware code (<a href="">Download Link</a>)</li>
-<li>Host code (<a href="">Download Link</a>)</li>
+<li>Vivado Project ( <a href="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/CIS_DVS/cis_dvs_project.zip?raw=true">Download Link</a> )</li>
+<li>Firmware code ( <a href="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/CIS_DVS/firmware/CIS_DVS_FIRMWARE.zip?raw=true">Download Link</a> )</li>
+<li>Host code ( <a href="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/CIS_DVS/host/CIS_DVS_HOST.zip?raw=true">Download Link</a> )</li>
 </ul>
 <p><br></p>
-<h3 id="how-to-install">How to Install</h3>
+<h3 id="how-to-install-pcie-drivers">How to Install PCIE drivers</h3>
+<p>To connect the host pc with the ZCU106, downloading and installing XDMA drivers from Xilinx are required. ( <a href="https://github.com/Xilinx/dma_ip_drivers/tree/master/XDMA/linux-kernel">Github Page</a> )</p>
+<h3 id="setting-up-the-working-environment">Setting up the Working Environment</h3>
 <ol>
 <li>Install <strong>Vivado 2021.2</strong>, <strong>Vitis 2021.2</strong> from <a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html">Vivado Design suite</a>.</li>
 <li>Download cis_dvs_project.zip file and unzip <br />
@@ -176,13 +199,61 @@ Make sure the HLS does not experience y2k22 bugs when exporting IPs such as Gamm
 <li>Right click <code>&lt;project_name_system&gt;</code> on the Flow Navigator and click <code>Build Project</code></li>
 <li>Download and install XDMA driver from Xilinx</li>
 </ol>
+<h2 id="5-steps-to-operate-both-cameras">5. Steps to Operate Both Cameras</h2>
+<h3 id="1-program-the-board">1. Program the Board</h3>
+<p>From here, there are two options for programming the ZCU106. <br> <br />
+<strong>Option 1: Using SD Card</strong> <br>
+1. Replace the firmware code i.e. contents of <code>&lt;project_name_system&gt;/&lt;project_name&gt;/src</code> with the following link:
+(<a href="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/MIPI2PCIE_AXIS/firmware/sdcard/MIPI2PCIE_AXIS_SDCARD_FIRMWARE.zip?raw=true">Download firmware code</a>)
+2. Right click <code>&lt;project_name_system&gt;</code> on the Flow Navigator and click <code>Build Project</code> <br>
+3. From the Flow Navigator of the Vitis Application Project, navigate to <code>&lt;project_name_system&gt;/Debug/sd_card/BOOT.bin</code> <br>
+4. Copy the BOOT.bin onto a SD Card
+(<a href="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/MIPI2PCIE_AXIS/sdcard/BOOT.BIN?raw=true">Download sample BOOT.bin</a>)<br>
+5. Power off the host PC and ZCU106, then insert the SD card. <br>
+6. Set the boot mode switch SW6 to ON-OFF-OFF-OFF to SD boot mode as shown in the following figure. <br>
+<br>
+<img src="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/MIPI2PCIE_AXIS/imgs/boot_mode.png?raw=true" alt="boot_mode" width="320" /> <br> <br>
+7. Connect the DVS Camera into HPC0 port. <br>
+8. Turn on the host PC and ZCU106 board. <br>
+9. Start up any Xilnx XDMA drivers that are necessary. Run commands such as <code>lspci</code> and <code>ls /dev</code> to check if the drivers are loaded. <br>
+10. Once the host PC is fully powered on and drivers are loaded, press the SW19 GPIO pin on the ZCU106 board. <br>
+11. Run host code on the PC.</p>
+<p><strong>Option 2: Using Vitis Application Project</strong> <br>
+1. Connect the UART and JTAG ports to the PC via microUSB to USB cable. <br>
+2. On the host PC, open a new terminal on GTKTerm for Ubuntu OS. <br>
+<strong>NOTE</strong>: If you are having PCIE issues and need to program the ZCU106 from a secondary PC ( which doesn't need to be Linux ) while the host PC is off, you can use the Vitis GUI. <br>
+3. Select Serial and Baud rate 112500. The terminal must correspond to the port of Step 1. You might want to try /dev/ttyUSB0 or /dev/ttyUSB1. <br>
+4. On the host PC, switch to the Vitis Application Project window.<br> Right click <code>&lt;project_name_system&gt;</code> on the Flow Navigator and click <code>Run as...</code> → <code>Launch Hardware</code> <br>
+5. Check if the terminal displays the following text correctly:
+<br><br>
+<img src="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/MIPI2PCIE_AXIS/imgs/firmware.png?raw=true" alt="firmware" width="320" /> <br> <br>
+6. Reboot the host pc for refreshing the PCIe connection. <br>
+7. Start up any Xilnx XDMA drivers that are necessary. Run commands such as <code>lspci</code> and <code>ls /dev</code> to check if the drivers are loaded. <br>
+8. Open GTKTerm, and repeat Step 3. Find an active serial port by pressing <code>y</code> in each terminal. <br>
+<strong>NOTE:</strong> If ZCU106 is programmed from a secondary PC, this step can be done by simply pressing 'y' in the secondary PC's Vitis GUI terminal. <br>
+9. Run host code on the PC. </p>
+<h3 id="2-run-host-code">2. Run Host Code</h3>
+<ol>
+<li>On the host PC, download MIPI2PCIE_AXIS_HOST.zip and unzip <br>
+( <a href="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/CIS_DVS/host/CIS_DVS_HOST.zip?raw=true">Download the host code</a> ) <br></li>
+<li>Open a terminal and <code>cd</code> to the host code directory <br></li>
+<li>Open <code>&lt;host_code_dir&gt;/src/config.hpp</code> <br></li>
+<li>Run <code>ls /dev</code> on a separate terminal to check xdma ports. Modify the contents of <code>config.hpp</code> to match the results of <code>ls /dev</code>. <br></li>
+<li>Run <code>make clean</code> → <code>make</code> over the host code.</li>
+<li>Run <code>./main</code> on the terminal.</li>
+<li><code>./main -c</code> : Show video from CIS camera.</li>
+<li><code>./main -d</code> : Show video from DVS camera. ( default )</li>
+<li><code>./main -s</code> : Show video stream from both CIS and DVS cameras</li>
+<li><code>./main -x</code> : Check if DVS data input has frame skip errors</li>
+<li><code>./main -w</code> : Save data input from DVS camera in .bin file format</li>
+<li><code>./main -r</code> : Display ROI box on top of video from DVS camera</li>
+</ol>
 <p>Here are some reference materials you might find useful: <br></p>
 <ul>
 <li><em>View our DVS-MIPI Register Setfile from <a href="https://nrvcorp.github.io/docs/register/DVS_MIPI/">here</a>.</em> <br></li>
 <li><em>View our DVS-FMC Board Pinmap from <a href="https://nrvcorp.github.io/docs/datasheet/DVS_FMC/">here</a>.</em> <br></li>
 <li><em>View AER Packet Format from <a href="https://github.com/nrvcorp/docs/blob/gh-pages/assets/datasheet/dvs_datasheet/aer_packet_format.pdf?raw=true">here</a>.</em></li>
 </ul>
-<h2 id="4-steps-to-operate-both-cameras">4. Steps to Operate Both Cameras</h2>
               
             </div>
           </div><footer>
