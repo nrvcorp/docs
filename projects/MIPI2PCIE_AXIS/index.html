@@ -190,6 +190,7 @@ Make sure the HLS does not experience y2k22 bugs when exporting IPs such as Gamm
 <li>Right click <code>&lt;project_name_system&gt;</code> on the Flow Navigator and click <code>Build Project</code></li>
 </ol>
 <h2 id="5-steps-to-operate-dvs-camera">5. Steps to Operate DVS Camera</h2>
+<p>Before you program the board, connecting the DVS Camera into HPC0 port is necessary.</p>
 <h3 id="1-program-the-board">1. Program the Board</h3>
 <p>From here, there are two options for programming the ZCU106. <br> <br />
 <strong>Option 1: Using SD Card</strong> <br>
@@ -203,11 +204,10 @@ Make sure the HLS does not experience y2k22 bugs when exporting IPs such as Gamm
 6. Set the boot mode switch SW6 to ON-OFF-OFF-OFF to SD boot mode as shown in the following figure. <br>
 <br>
 <img src="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/MIPI2PCIE_AXIS/imgs/boot_mode.png?raw=true" alt="boot_mode" width="320" /> <br> <br>
-7. Connect the DVS Camera into HPC0 port. <br>
-8. Turn on the host PC and ZCU106 board. <br>
-9. Start up any Xilnx XDMA drivers that are necessary. Run commands such as <code>lspci</code> and <code>ls /dev</code> to check if the drivers are loaded. <br>
-10. Once the host PC is fully powered on and drivers are loaded, press the SW19 GPIO pin on the ZCU106 board. <br>
-11. Run host code on the PC.</p>
+7. Turn on the host PC and ZCU106 board. <br>
+8. Start up any Xilnx XDMA drivers that are necessary. Run commands such as <code>lspci</code> and <code>ls /dev</code> to check if the drivers are loaded. <br>
+9. Once the host PC is fully powered on and drivers are loaded, press the SW19 GPIO pin on the ZCU106 board. <br>
+10. Run host code on the PC.</p>
 <p><strong>Option 2: Using Vitis Application Project</strong> <br>
 1. Connect the UART and JTAG ports to the PC via microUSB to USB cable. <br>
 2. On the host PC, open a new terminal on GTKTerm for Ubuntu OS. <br>

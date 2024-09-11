@@ -200,38 +200,41 @@ Make sure the HLS does not experience y2k22 bugs when exporting IPs such as Gamm
 <li>Download and install XDMA driver from Xilinx</li>
 </ol>
 <h2 id="5-steps-to-operate-both-cameras">5. Steps to Operate Both Cameras</h2>
+<p>Before you program the board, connecting the DVS Camera into HPC1 port and CIS camera into HPC0 port is necessary.</p>
 <h3 id="1-program-the-board">1. Program the Board</h3>
-<p>From here, there are two options for programming the ZCU106. <br> <br />
-<strong>Option 1: Using SD Card</strong> <br>
-1. Replace the firmware code i.e. contents of <code>&lt;project_name_system&gt;/&lt;project_name&gt;/src</code> with the following link:
-(<a href="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/MIPI2PCIE_AXIS/firmware/sdcard/MIPI2PCIE_AXIS_SDCARD_FIRMWARE.zip?raw=true">Download firmware code</a>)
-2. Right click <code>&lt;project_name_system&gt;</code> on the Flow Navigator and click <code>Build Project</code> <br>
-3. From the Flow Navigator of the Vitis Application Project, navigate to <code>&lt;project_name_system&gt;/Debug/sd_card/BOOT.bin</code> <br>
+<!-- From here, there are two options for programming the ZCU106. <br> <br />
+**Option 1: Using SD Card** <br>
+1. Replace the firmware code i.e. contents of `<project_name_system>/<project_name>/src` with the following link:
+([Download firmware code](https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/MIPI2PCIE_AXIS/firmware/sdcard/MIPI2PCIE_AXIS_SDCARD_FIRMWARE.zip?raw=true))
+2. Right click `<project_name_system>` on the Flow Navigator and click `Build Project` <br>
+3. From the Flow Navigator of the Vitis Application Project, navigate to `<project_name_system>/Debug/sd_card/BOOT.bin` <br>
 4. Copy the BOOT.bin onto a SD Card
-(<a href="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/MIPI2PCIE_AXIS/sdcard/BOOT.BIN?raw=true">Download sample BOOT.bin</a>)<br>
+([Download sample BOOT.bin](https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/MIPI2PCIE_AXIS/sdcard/BOOT.BIN?raw=true))<br>
 5. Power off the host PC and ZCU106, then insert the SD card. <br>
 6. Set the boot mode switch SW6 to ON-OFF-OFF-OFF to SD boot mode as shown in the following figure. <br>
 <br>
 <img src="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/MIPI2PCIE_AXIS/imgs/boot_mode.png?raw=true" alt="boot_mode" width="320" /> <br> <br>
-7. Connect the DVS Camera into HPC0 port. <br>
-8. Turn on the host PC and ZCU106 board. <br>
-9. Start up any Xilnx XDMA drivers that are necessary. Run commands such as <code>lspci</code> and <code>ls /dev</code> to check if the drivers are loaded. <br>
-10. Once the host PC is fully powered on and drivers are loaded, press the SW19 GPIO pin on the ZCU106 board. <br>
-11. Run host code on the PC.</p>
-<p><strong>Option 2: Using Vitis Application Project</strong> <br>
-1. Connect the UART and JTAG ports to the PC via microUSB to USB cable. <br>
-2. On the host PC, open a new terminal on GTKTerm for Ubuntu OS. <br>
-<strong>NOTE</strong>: If you are having PCIE issues and need to program the ZCU106 from a secondary PC ( which doesn't need to be Linux ) while the host PC is off, you can use the Vitis GUI. <br>
-3. Select Serial and Baud rate 112500. The terminal must correspond to the port of Step 1. You might want to try /dev/ttyUSB0 or /dev/ttyUSB1. <br>
-4. On the host PC, switch to the Vitis Application Project window.<br> Right click <code>&lt;project_name_system&gt;</code> on the Flow Navigator and click <code>Run as...</code> → <code>Launch Hardware</code> <br>
-5. Check if the terminal displays the following text correctly:
+7. Turn on the host PC and ZCU106 board. <br>
+8. Start up any Xilnx XDMA drivers that are necessary. Run commands such as `lspci` and `ls /dev` to check if the drivers are loaded. <br>
+9. Once the host PC is fully powered on and drivers are loaded, press the SW19 GPIO pin on the ZCU106 board. <br>
+10. Run host code on the PC. -->
+
+<!-- **Option 2: Using Vitis Application Project** <br> -->
+<ol>
+<li>Connect the UART and JTAG ports to the PC via microUSB to USB cable. <br></li>
+<li>On the host PC, open a new terminal on GTKTerm for Ubuntu OS. <br>
+<strong>NOTE</strong>: If you are having PCIE issues and need to program the ZCU106 from a secondary PC ( which doesn't need to be Linux ) while the host PC is off, you can use the Vitis GUI. <br></li>
+<li>Select Serial and Baud rate 112500. The terminal must correspond to the port of Step 1. You might want to try /dev/ttyUSB0 or /dev/ttyUSB1. <br></li>
+<li>On the host PC, switch to the Vitis Application Project window.<br> Right click <code>&lt;project_name_system&gt;</code> on the Flow Navigator and click <code>Run as...</code> → <code>Launch Hardware</code> <br></li>
+<li>Check if the terminal displays the following text correctly:
 <br><br>
-<img src="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/MIPI2PCIE_AXIS/imgs/firmware.png?raw=true" alt="firmware" width="320" /> <br> <br>
-6. Reboot the host pc for refreshing the PCIe connection. <br>
-7. Start up any Xilnx XDMA drivers that are necessary. Run commands such as <code>lspci</code> and <code>ls /dev</code> to check if the drivers are loaded. <br>
-8. Open GTKTerm, and repeat Step 3. Find an active serial port by pressing <code>y</code> in each terminal. <br>
-<strong>NOTE:</strong> If ZCU106 is programmed from a secondary PC, this step can be done by simply pressing 'y' in the secondary PC's Vitis GUI terminal. <br>
-9. Run host code on the PC. </p>
+<img src="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/MIPI2PCIE_AXIS/imgs/firmware.png?raw=true" alt="firmware" width="320" /> <br> <br></li>
+<li>Reboot the host pc for refreshing the PCIe connection. <br></li>
+<li>Start up any Xilnx XDMA drivers that are necessary. Run commands such as <code>lspci</code> and <code>ls /dev</code> to check if the drivers are loaded. <br></li>
+<li>Open GTKTerm, and repeat Step 3. Find an active serial port by pressing <code>y</code> in each terminal. <br>
+<strong>NOTE:</strong> If ZCU106 is programmed from a secondary PC, this step can be done by simply pressing 'y' in the secondary PC's Vitis GUI terminal. <br></li>
+<li>Run host code on the PC. </li>
+</ol>
 <h3 id="2-run-host-code">2. Run Host Code</h3>
 <ol>
 <li>On the host PC, download MIPI2PCIE_AXIS_HOST.zip and unzip <br>
