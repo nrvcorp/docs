@@ -149,7 +149,7 @@
 <a href="https://leopardimaging.com/product/platform-partners/amd/li-imx274mipi-fmc/">Cis Camera Vendor Link</a></p>
 <hr />
 <h2 id="3-download-and-installation">3. Download and Installation</h2>
-<p>The project consists of the following</p>
+<p>The project consists of the following:</p>
 <ul>
 <li>Vivado Project (<a href="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/CIS_DVS/cis_dvs_project.zip?raw=true">Download Link</a>)</li>
 <li>Firmware code (<a href="">Download Link</a>)</li>
@@ -163,7 +163,9 @@
 (<a href="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/CIS_DVS/cis_dvs_project.zip?raw=true">Download the project</a>)</li>
 <li>Open <strong>Vivado 2021.2</strong> and run the provided TCL script (Click <code>Tools</code> → <code>Run Tcl Script</code> → Select <code>&lt;current_dir&gt;/CIS_DVS.tcl</code>)</li>
 <li>The project will open in <code>&lt;current_dir&gt;/vivado_project</code> folder</li>
-<li>Generate Bitstream</li>
+<li>Generate Bitstream <br />
+Make sure the HLS does not experience y2k22 bugs when exporting IPs such as Gamma LUT.
+<a href="https://adaptivesupport.amd.com/s/article/76960?language=en_US">(y2k22 bug solution link)</a></li>
 <li>Generate XSA file (Click <code>File</code> → <code>Export</code> → <code>Export Hardware...</code> →  select <code>include bitstream</code> → write xsa_file_name) <br />
 (<a href="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/CIS_DVS/xsa/CIS_DVS_wrapper_v3_3.xsa?raw=true">Download generated XSA file</a>)</li>
 <li>Open <strong>Vitis 2021.2</strong> and create Application Project (Click <code>File</code> → <code>New</code> → <code>Application Project</code> → <code>Create a new platform from hardware (XSA)</code>)</li>

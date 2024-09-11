@@ -59,6 +59,10 @@
     <li class="toctree-l2"><a class="reference internal" href="#3-download-and-installation">3. Download and Installation</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#4-steps-to-operate-dvs-camera">4. Steps to Operate DVS Camera</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#program-the-board">Program the Board</a>
+    </li>
+        </ul>
     </li>
     </ul>
                   </li>
@@ -138,7 +142,7 @@
 <li>AXI GPIO (Xilinx IP)</li>
 </ol>
 <h2 id="3-download-and-installation">3. Download and Installation</h2>
-<p>The project consists of the following</p>
+<p>The project consists of the following:</p>
 <ul>
 <li>Vivado Project (<a href="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/CIS_DVS/cis_dvs_project.zip?raw=true">Download Link</a>)</li>
 <li>Firmware code (<a href="">Download Link</a>)</li>
@@ -146,7 +150,9 @@
 <br></li>
 </ul>
 <h2 id="4-steps-to-operate-dvs-camera">4. Steps to Operate DVS Camera</h2>
-<p>1) Download the boot BOOT.bin file and load it on the SD Card
+<h3 id="program-the-board">Program the Board</h3>
+<p>Option 1: Using SD Card
+1) Download the boot BOOT.bin file and load it on the SD Card
 <br>
 (<a href="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/MIPI2PCIE_AXIS/sdcard/BOOT.BIN?raw=true">Download the BOOT.bin</a>)</p>
 <p>2) Power off the host PC and ZCU106, then insert the SD card. <br>
@@ -156,6 +162,7 @@
 5) Turn on the host PC and ZCU106 board. <br>
 6) Once the host PC is fully powered on, press the SW19 GPIO pin on the ZCU106 board. <br>
 7) Run host code on the PC.</p>
+<p>Option 2: Using Vitis Application Project</p>
 <p>Below figure shows the complete board setup. <br>
 <img src="https://github.com/nrvcorp/docs/blob/gh-pages/assets/projects/MIPI2PCIE_AXIS/imgs/board_setup.png?raw=true" alt="board_setup" width="320" /></p>
 <p>The video will appear as follows: <br></p>
